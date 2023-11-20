@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script 2</title>
+</head>
+<body>
+    
+
+    <script>
+        const fechaComoCadena = "2023-11-17 15:20:00"; // dia lunes
+        const dias = [
+        'domingo',
+        'lunes',
+        'martes',
+        'miercoles',
+        'jueves',
+        'viernes',
+        'sabado',
+        ];
+        const numeroDia = new Date(fechaComoCadena).getDay();
+        const nombreDia = dias[numeroDia];
+        console.log("Nombre de dia de la semana: ", nombreDia);
+    </script>
+</body>
+</html>
