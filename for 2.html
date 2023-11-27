@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saludar a estudiantes con for</title>
+</head>
+<body>
+    
+    <script>
+        let students = ["Sonia", "AyLi Jodelle", "Braulio"];
+
+        function saludarstudents (students){
+            for (let i=0; i < students.length; i++) {
+                console.log("Hola " + students[i]);
+        }
+        }
+        function saludarstudents2 (students){
+            for (student of students) {
+                console.log("Hola " + student);
+        }
+        }
+
+        saludarstudents(students)
+        saludarstudents2(students)
+    </script>
+</body>
+</html>

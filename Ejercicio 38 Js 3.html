@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script 3</title>
+</head>
+<body>
+
+    <script>
+        function getType(objParam) {
+            var strResultado = "";
+            strTipo = Object.prototype.toString.call(objParam);
+            print(strTipo)
+
+            switch (strTipo) {
+                case "[object String]":
+                    strResultado = "string";
+                    break;
+                case "[object Number]":
+                    strResultado = "number";
+                    break;
+                case "[object Boolean]": 
+                    strResultado = "boolean";
+                    break;
+                case "[object Null]":
+                    strResultado = "null";
+                    break;
+                case "[object Undefined]": 
+                    strResultado = "undefined";
+                    break;
+                default:
+                    strResultado = "error";
+                    break;
+            }
+            return strResultado;
+        }
+        /*Test code*/
+
+        var strTipoObjecto ="objecto";
+        var strTipoPrimitivo ="primitivo";
+        
+        var intTipoPrimitivo ="primitivo";
+        var strPrimitivo ="primitivo";
+
+        console.log("CADENAS:\n");
+          var strObject = new String("Objecto del tipo String");
+          console.log('El '+strTipoObjecto+' "'+strObject+'" es del tipo: '+getType(strObject)+'\n');
+          var strPrimitivo = "Cadena primitiva";
+          console.log('El '+strTipoPrimitivo+' "'+strPrimitivo+'" es del tipo: '+getType(strPrimitivo)+'\n') 
+          
+        console.log("ENTEROS:\n");
+          var intObject = new Number(22);
+          console.log('El '+strTipoObjecto+' "'+intObject+'" es del tipo: '+getType(intObject)+'\n');
+          var intPrimitivo = -22;
+          console.log('El '+intTipoPrimitivo+' "'+intPrimitivo+'" es del tipo: '+getType(intPrimitivo)+'\n');
+        
+        console.log("BOOLEANOS:\n");
+          var bolObject = new Boolean(true);
+          console.log('El '+strTipoObjecto+' "'+bolObject+'" es del tipo: '+getType(bolObject)+'\n');
+          var bolPrimitivo = false;
+          console.log('El '+strTipoObjecto+' "'+bolPrimitivo+'" es del tipo: '+getType(bolPrimitivo)+'\n')
+        
+        console.log("NULL:\n");
+          var nullObject = new Object();
+          console.log('El '+strTipoObjecto+' "'+nullObject+'" es del tipo: '+getType(nullObject)+'\n');
+          var nullPrimitivo = null;
+          console.log('El '+strTipoPrimitivo+' "'+nullPrimitivo+'" es del tipo: '+getType(nullPrimitivo)+'\n')
+
+        console.log("UNDEFINED:\n");
+          var undefinedPrimitivo = undefined;
+          console.log('El '+strTipoPrimitivo+' "'+undefinedPrimitivo+'" es del tipo: '+getType(undefinedPrimitivo)+'\n');
+
+    </script>
+</body>
+</html>
