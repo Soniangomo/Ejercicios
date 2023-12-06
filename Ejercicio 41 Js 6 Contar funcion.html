@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar funcion js</title>
+</head>
+<body>
+    
+
+    <script>
+       const textoEnCadena = (cadena ="", texto ="") => {
+        if (!cadena) return console.warn("You did not add a large text");
+        if (!texto) return console.warn("You did not add any work to run");
+
+        let i =0,
+          contador = 0;
+        
+        while (i !== -1){
+           i = cadena.indexOf(texto, i);
+           if(i !== -1){
+            i++;
+            contador ++;
+           }
+        }
+        return console.info(`La palabra ${texto} se repite ${contador} veces`);
+       }
+
+       textoEnCadena("Hola mundo incruel mundo placentero","mundo");
+    </script>
+</body>
+</html>
